@@ -11,3 +11,12 @@ def get_amicable_numbers(limit):
             amis.append(s)
             amis.append(i)
     return amis
+
+
+def get_abundant_numbers(limit):
+    abunds = []
+    for i in range(1, limit):
+        s = sum(get_proper_divisors(i))
+        if s > i:
+            abunds.append(i)
+    return abunds
